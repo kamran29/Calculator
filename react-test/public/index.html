@@ -175,10 +175,60 @@ var head7 = document.getElementById("head7");
 var head8 = document.getElementById("head8");
 var head9 = document.getElementById("head9");
 var head10 = document.getElementById("head10");
-
 var f1 =  firebase.database().ref("test");
 
+
+
+var x = true
 f1.on('value',gotData,ed);
+
+// f1.on('child_added',function(data){
+//     var scores = data.val();
+// //console.log(keys);
+// var k = Object.keys(scores)
+// //console.log(k)
+//     var a = k[0]
+//     var c = k[1]
+//     var d = k[2]
+//     var e  = k[3]
+//     var f = k[4]
+//     var g = k[5]
+//     var h = k[6]
+//     var h = k[7]
+//     var i = k[8]
+//     var j = k[9]
+//     var y = k[10]
+//     //console.log(scores[a])
+// var b = scores[a]
+// head1.innerHTML = scores
+
+
+
+
+
+
+
+
+
+
+
+
+// });
+
+
+
+// head1.innerHTML = "none"
+// head2.innerHTML = "none"
+// head3.innerHTML = "none"
+// head4.innerHTML = "none"
+// head5.innerHTML = "none"
+// head6.innerHTML = "none"
+// head7.innerHTML = "none"
+// head8.innerHTML = "none"
+// head9.innerHTML = "none"
+// head10.innerHTML = "none"
+
+
 
      }
 
@@ -215,6 +265,24 @@ var k = Object.keys(scores)
     var j = k[9]
     var y = k[10]
     //console.log(scores[a])
+
+
+if (y != null){
+// var scores = data.val();
+// //console.log(keys);
+// var k = Object.keys(scores)
+// console.log(k) 
+
+// firebase.database().ref("test").child(a).remove()
+// head1.innerHTML = k[0]
+head10.innerHTML = scores[y]
+
+var f1 =  firebase.database().ref("test");
+f1.remove()
+console.log(y) 
+
+}
+else{
 var b = scores[a]
 head1.innerHTML = b
 head2.innerHTML = scores[c]
@@ -225,7 +293,12 @@ head6.innerHTML = scores[g]
 head7.innerHTML = scores[h]
 head8.innerHTML = scores[i]
 head9.innerHTML = scores[j]
+
+
+
 head10.innerHTML = scores[y]
+}
+
 
 
 
